@@ -1,0 +1,491 @@
+@charset "UTF-8";
+
+/*　枠組み */
+body{
+	margin: 0;
+}
+
+
+
+/* ヘッダー */
+header{
+	margin: 0;
+	background-color: white;
+}
+
+header h1{
+	color:black;
+	margin: 0;
+	padding: 70px 80px;
+font-family: 'Indie Flower', cursive;
+	font-size: 30px;
+	font-weight:lighter;
+	letter-spacing:9px;
+	text-align: center;
+	color: #005243
+}
+
+
+
+/* ナビメニュー */
+nav #menu{
+	margin: 0;
+}
+
+nav{
+	background-color:	white;
+}
+
+nav ul{
+	text-align: center;
+	padding-left: 0px;
+	list-style:none;
+	padding-bottom: 15px;
+}
+
+nav li{
+	display:inline-block;
+	font-size: 15px;
+	padding-left: 15px;
+	font-weight:lighter;
+	width: auto;
+	margin:0;
+	font-family: 'Abel', sans-serif;
+	text-decoration:none;
+}
+
+nav li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+	color: black;
+	letter-spacing: 2px;
+}
+
+nav li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+nav li a:hover::after {
+  transform: scale(1, 1);
+}
+
+
+
+/* メインコンテンツ */
+.main{
+	height:auto;
+	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+	background:#f9f9f9;
+	box-sizing: border-box;
+}
+
+.main p{
+	color:#080000;
+	font-size:17px;
+	letter-spacing: 0.05em
+}
+
+
+.main_article{
+	width: 100%;
+	margin-bottom:30px;
+	margin-right:150px;
+	background-color:white;
+}
+
+.main_article a{
+	text-decoration: none;
+}
+
+/* 「title」部分の表示　*/
+.article_title{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.article_title a{
+	text-decoration: none;
+  font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	font-weight: 100;
+	font-size: 20px;
+	padding: 12px 22px;
+	color: #808080;
+}
+
+.article_title a:hover{
+	text-decoration:underline;
+}
+
+
+.main_article img{
+	height: 300px;
+	width:100%;
+	background-size: cover;
+}
+
+
+.main .article_text{
+	text-align: left;
+	padding: 10px 50px;
+	color: #808080;
+	font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+
+
+/* 記事詳細 */
+.article_detail{
+		margin: 0;
+		background:white;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+}
+
+.article_detail_title{
+	margin: 0;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	color: #333;
+	font-size: 30px;
+}
+
+.article_detail_highlight{
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	border-bottom: 2px solid #808080;
+	font-size: 22px;
+}
+
+.article_detail_text{
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+
+
+/* 「more」部分の表示　*/
+.main .more{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.main .more a{
+	text-decoration: none;
+  font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	font-weight: 100;
+	font-size: 15px;
+	padding: 12px 22px;
+	border: 1px solid #808080;
+	color: #808080;
+}
+
+.main .more a:hover{
+	background: #F5F5F5
+}
+
+
+/* ページング機能　*/
+.paging_prev{
+	text-align:left;
+	margin-bottom:50px;
+}
+
+.paging_prev a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+	color: #808080;
+	font-family: 'Abel', sans-serif;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+
+.paging_prev a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.paging_prev a:hover::after {
+  transform: scale(1, 1);
+}
+
+.paging_next{
+	text-align:right;
+	margin-bottom:50px;
+}
+
+.paging_next a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+	color: #808080;
+	font-family: 'Abel', sans-serif;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+
+.paging_next a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.paging_next a:hover::after {
+  transform: scale(1, 1);
+}
+
+
+
+/* サイドバー (検索機能)*/
+.search{
+	text-align: center;
+	margin-bottom: 20px;
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 40px;
+	position: relative;
+}
+
+.search_form{
+	width:85% ;
+	height: 36px;
+	margin: 0;
+	background-color: #F5F5F5;
+	font-size: 15px;
+	position: absolute;
+	left: 30px;
+	top: 20px;
+	border: none;
+}
+
+.search_img{
+	width: 20px;
+	margin-top: 10px;
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
+
+.search input[type="text"]:focus{
+	outline: 0;
+}
+
+
+
+/*　サイドバー(最近の投稿) */
+.recent_post{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		background: white;
+}
+
+.recent_post h3{
+	font-family: 'Abel', sans-serif;
+	text-align: center;
+}
+
+.recent_post p{
+	margin: 0 10px 0 10px;
+	border-top: 1px dotted #808080;
+	padding-top: 18px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	height: 20px;
+	font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+.recent_post a{
+	text-decoration: none;
+	color: #808080;
+	font-size: 15px;
+}
+
+.recent_post a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* サイドバー(カテゴリー)　*/
+.category_post{
+	padding-top: 20px;
+	margin-bottom: 20px;
+	background: white;
+}
+
+.category_post h3{
+	font-family: 'Abel', sans-serif;
+	text-align: center;;
+}
+
+.category_post p{
+	margin: 0 10px 0 10px;
+	border-top: 1px dotted #808080;
+	padding-top: 18px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	height: 20px;
+}
+
+.category_post p a{
+text-decoration: none;
+color: #808080;
+font-size: 15px;
+}
+
+.category_post a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* サイドバー (アーカイブ) */
+.archive_post{
+	padding-top: 20px;
+	background: white;
+	margin-bottom: 50px;
+}
+
+.archive_post h3{
+	font-family: 'Abel', sans-serif;
+	text-align: center;;
+}
+
+.archive_post p{
+	margin: 0 10px 0 10px;
+	border-top: 1px dotted #808080;
+	padding-top: 18px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	height: 20px;
+}
+
+.archive_post p a{
+text-decoration: none;
+color: #808080;
+font-size: 15px;
+}
+
+.archive_post a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* アバウト　*/
+#about{
+	margin:0 auto;
+	width: 500px;
+}
+
+#about .profile p{
+	text-align: left;
+	font-weight: lighter;
+	font-size: 14px;
+}
+
+
+
+/* コンタクトフォーム　*/
+.contact p{
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+.contact_form{
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+}
+
+.contact_form .text{
+	width: 300px;
+	height: 250px;
+}
+
+.contact_form .other{
+	width: 300px;
+}
+
+.contact_form .submit{
+	text-align: left;
+}
+
+
+
+/* フッター */
+footer{
+	font-family: 'Abel', sans-serif;
+	border-top:1px solid #DCDCDC;
+	text-align:center;
+	height: 50px;
+	padding-top: 22px;
+}
+
+
+
+/* レスポンシブデザイン　1040pxより大きい場合に適用*/
+@media (min-width:1040px) {
+
+.main:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+article{
+	float: left;
+	width:57%;
+	margin-top: 30px;
+	margin-left: 6%;
+	margin-right: 2%;
+}
+
+aside{
+	float: left;
+	width:29%;
+	margin-top: 30px;
+	margin-right: 6%
+}
+
+nav li{
+	padding-left: 80px;
+}
+}
