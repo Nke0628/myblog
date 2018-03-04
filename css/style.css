@@ -85,7 +85,7 @@ nav li a:hover::after {
 .main{
 	height:auto;
 	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-	background:#f9f9f9;
+	background:white;
 	box-sizing: border-box;
 }
 
