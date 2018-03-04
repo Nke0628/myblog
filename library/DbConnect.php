@@ -1,16 +1,19 @@
 <?php
 
+//設定ファイル読み込み
+require_once(__DIR__.'/../../config.php');
+
 class DbConnect{
 
-	const DB_NAME='blog';
-	const DB_user='root';
-	const DB_password='4cvsxkTu';
+	const DB_name=DB_NAME;
+	const DB_user=DB_USER;
+	const DB_password=DB_PASSWORD;
 
 	private function pdo()
 	{
 		try
 		{
-			$dsn='mysql:dbname='.self::DB_NAME.';host=localhost;charset=utf8';
+			$dsn='mysql:dbname='.self::DB_name.';host=localhost;charset=utf8';
 			$dsh=new PDO($dsn,self::DB_user, self::DB_password);
 			$dsh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 

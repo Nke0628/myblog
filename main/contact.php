@@ -30,9 +30,24 @@ title
 <input class="other" type="text"><br><br>
 text
 <input class="text" type="textarea"><br><br>
-<input class="submit" type="submit" value="送信"><br>
+<input class="submit" type="submit" name="submit" value="送信"><br>
 </form>
 <div>
+
+<?php
+
+if(isset($_POST['submit'])){
+
+  mb_language('japanese');
+  mb_internal_encoding('UTF-8');
+
+  $subject = 'TEST';
+  $message = 'こんにちは';
+  $result = mb_send_mail($to,$subject,$message);
+
+}
+
+?>
 
 <!--フッター部分-->
 <?php include('../frame/footer.html');?>
