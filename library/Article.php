@@ -243,7 +243,7 @@ function disp_article()
 
 	//dbクラスのインスタンス
 	$db=new DbConnect();
-	$sql='select * from article limit '.$offset.','.self::disp.'';
+	$sql='select * from article order by create_date desc limit '.$offset.','.self::disp.'';
 	$rec=$db->select_all($sql);
 
 

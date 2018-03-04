@@ -101,6 +101,7 @@ nav li a:hover::after {
 	margin-bottom:30px;
 	margin-right:150px;
 	background-color:white;
+	border-bottom: 1px solid 	#e0e0e0;
 }
 
 .main_article a{
@@ -120,7 +121,7 @@ nav li a:hover::after {
 	font-weight: 100;
 	font-size: 20px;
 	padding: 12px 22px;
-	color: #808080;
+	color: #333;
 }
 
 .article_title a:hover{
@@ -129,7 +130,7 @@ nav li a:hover::after {
 
 
 .main_article img{
-	height: 300px;
+	height: auto;
 	width:100%;
 	background-size: cover;
 }
@@ -179,6 +180,11 @@ nav li a:hover::after {
 	line-height: 1.5;
 }
 
+.article_detail_img{
+	width: 100%;
+	height: auto;
+	background-size: cover;
+}
 
 
 /* 「more」部分の表示　*/
@@ -285,12 +291,11 @@ nav li a:hover::after {
 	width:85% ;
 	height: 36px;
 	margin: 0;
-	background-color: #F5F5F5;
 	font-size: 15px;
 	position: absolute;
 	left: 30px;
 	top: 20px;
-	border: none;
+	border: 1px solid #e0e0e0;
 }
 
 .search_img{
