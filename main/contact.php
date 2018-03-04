@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
   mb_internal_encoding('UTF-8');
 
   $subject = 'TEST';
-  $message = 'こんにちは';
+  $message = 'こんにちはl';
   $result = mb_send_mail($to,$subject,$message);
 
 }
