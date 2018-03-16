@@ -8,6 +8,7 @@ body{
 
 
 /* ヘッダー */
+
 header{
 	margin: 0;
 	background-color: white;
@@ -16,13 +17,12 @@ header{
 header h1{
 	color:black;
 	margin: 0;
-	padding: 71px 80px;
-font-family: 'Indie Flower', cursive;
-	font-size: 30px;
-	font-weight:lighter;
-	letter-spacing:9px;
+	padding: 35px 80px;
+	font-family: 'Poiret One', cursive;
 	text-align: center;
-	color: #005243
+	color: #333;
+	font-weight:normal;
+	font-size:50px
 }
 
 
@@ -85,7 +85,7 @@ nav li a:hover::after {
 .main{
 	height:auto;
 	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-	background:white;
+	background:#f7f7f7;
 	box-sizing: border-box;
 }
 
@@ -458,10 +458,12 @@ font-size: 15px;
 /* フッター */
 footer{
 	font-family: 'Abel', sans-serif;
-	border-top:1px solid #DCDCDC;
+	border-top:1px solid #333;
 	text-align:center;
 	height: 50px;
 	padding-top: 22px;
+	background: #1f1f1f;
+	color:white;
 }
 
 

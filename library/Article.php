@@ -430,7 +430,8 @@ public function disp_archive(){
 //カテゴリ表示機能
 public function disp_category(){
 	$db=new DbConnect();
-	$sql="SELECT DISTINCT category_name,category_id
+	$sql="SELECT DISTINCT category_name,
+												category_id
 				FROM article AS AT
 				INNER JOIN m_category MC
 				ON AT.category=MC.category_id
