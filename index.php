@@ -17,6 +17,7 @@
 <?php require_once(__DIR__.'/library/Article.php');?>
 
 <div class="head">
+
 <!-- ヘッダー部分 -->
 <?php include(__DIR__.'/frame/header.html');?>
 

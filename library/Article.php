@@ -250,6 +250,7 @@ function disp_article()
 	foreach($rec as $key=>$val)
 	{
 		echo '<div class="main_article">'."\n";
+		echo '<div class="main_article_date">'.date('Y.m.d',strtotime($val['create_date'])).'</div>';
 		echo '<div class="article_title"><a href="../article/'.$val['file_name'].'">'.$val['title'].'</a></div>'."\n";
 		echo '<a href="../article/'.$val['file_name'].'">'."\n";
 		echo '<img src="../images/'.$val['pic'].'">'."\n";

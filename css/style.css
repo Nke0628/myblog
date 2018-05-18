@@ -1,31 +1,58 @@
 @charset "UTF-8";
 
-/*　枠組み */
-body{
-	margin: 0;
+/*　初期値リセット */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
 }
 
-
-
+li{
+	list-style: none;
+}
 /* ヘッダー */
+.head{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	opacity: 0.9;
+}
 
 header{
 	margin: 0;
-	background-color: white;
+	background-color: #ff6347;
 }
 
 header h1{
 	color:black;
 	margin: 0;
-	padding: 35px 80px;
+	padding: 5px 80px;
 	font-family: 'Poiret One', cursive;
 	text-align: center;
-	color: #333;
+	color: white;
 	font-weight:normal;
-	font-size:50px
+	font-size:25px;
 }
 
+.header-twitter{
+	float:right;
+	font-size: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color:#55acee;
+}
 
+header p{
+	text-align: center;
+	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+	font-size:10px;
+	padding-bottom:5px;
+	color:white;
+}
 
 /* ナビメニュー */
 nav #menu{
@@ -33,19 +60,19 @@ nav #menu{
 }
 
 nav{
-	background-color:	white;
+	background: #ff6347;
 }
 
 nav ul{
 	text-align: center;
 	padding-left: 0px;
 	list-style:none;
-	padding-bottom: 15px;
+	padding: 5px;
 }
 
 nav li{
 	display:inline-block;
-	font-size: 15px;
+	font-size: 10px;
 	padding-left: 15px;
 	font-weight:lighter;
 	width: auto;
@@ -56,9 +83,8 @@ nav li{
 
 nav li a {
   position: relative;
-  display: inline-block;
   text-decoration: none;
-	color: black;
+	color: white;
 	letter-spacing: 2px;
 }
 
@@ -69,7 +95,7 @@ nav li a::after {
   content: '';
   width: 100%;
   height: 1px;
-  background: #333;
+  background: white;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: transform .3s;
@@ -79,14 +105,24 @@ nav li a:hover::after {
   transform: scale(1, 1);
 }
 
+.fas{
+	padding-right: 5px;
+}
 
 
 /* メインコンテンツ */
+
+article{
+	margin: 0 15px;
+}
+
 .main{
 	height:auto;
 	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 	background:#f7f7f7;
 	box-sizing: border-box;
+	margin-top:110px;
+	padding-top:20px;
 }
 
 .main p{
@@ -106,6 +142,15 @@ nav li a:hover::after {
 
 .main_article a{
 	text-decoration: none;
+}
+
+
+/* 更新日時の表示  */
+.main_article_date{
+	text-align: center;
+	padding-top: 12px;
+	font-family: 'Abel', sans-serif;
+
 }
 
 /* 「title」部分の表示　*/
@@ -128,13 +173,11 @@ nav li a:hover::after {
 	text-decoration:underline;
 }
 
-
 .main_article img{
 	height: auto;
 	width:100%;
 	background-size: cover;
 }
-
 
 .main .article_text{
 	text-align: left;
@@ -145,7 +188,7 @@ nav li a:hover::after {
 
 
 
-/* 記事詳細 */
+/* 記事詳細ページのCSS */
 .article_detail{
 		margin: 0;
 		background:white;
@@ -414,15 +457,32 @@ font-size: 15px;
 
 
 /* アバウト　*/
-#about{
-	margin:0 auto;
-	width: 500px;
+
+#about {
+	font-family:"Gulim","Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
-#about .profile p{
+.faq-wrapper{
+	background:#f7f7f7;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.faq-container{
+	padding-top: 40px;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.faq-list-item{
 	text-align: left;
-	font-weight: lighter;
-	font-size: 14px;
+	border-bottom:1px solid #808080;
+	cursor: pointer;
+	margin-bottom: 25px;
+}
+
+.answer{
+	display: none;
 }
 
 
@@ -458,18 +518,31 @@ font-size: 15px;
 /* フッター */
 footer{
 	font-family: 'Abel', sans-serif;
-	border-top:1px solid #333;
 	text-align:center;
 	height: 50px;
 	padding-top: 22px;
-	background: #1f1f1f;
-	color:white;
+	background: white;
+	color:#333;
+	opacity: 0.9;
 }
 
 
 
 /* レスポンシブデザイン　1040pxより大きい場合に適用*/
 @media (min-width:1040px) {
+
+header h1{
+		font-size:35px;
+}
+
+.header-twitter{
+	float:right;
+	font-size: 20px;
+	position: absolute;
+	top: 30px;
+	right: 400px;
+	color:#55acee;
+}
 
 .main:after{
 	content:"";
@@ -494,5 +567,6 @@ aside{
 
 nav li{
 	padding-left: 80px;
+	font-size: 12px;
 }
 }

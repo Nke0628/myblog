@@ -41,6 +41,7 @@ if(isset($_POST['submit'])){
   mb_language('japanese');
   mb_internal_encoding('UTF-8');
 
+  $to='ooo_diva@yahoo.co.jp';
   $subject = 'TEST';
   $message = 'こんにちはl';
   $result = mb_send_mail($to,$subject,$message);

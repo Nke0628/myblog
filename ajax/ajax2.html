@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>badger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Poiret+One" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <form method="post">
+    <input type="text" name="text" class="text">
+  </form>
+
+<script>
+
+$(function(){
+  $('.text').on('keyup focus',function(){
+    $.ajax({
+      type:'POST',
+      dataType:'json',
+      url:api2.php,
+      data:{
+        item:text
+      },
+      success:function(data){
+        console.log(data);
+      },
+      error:function(XMLHttpRequest,status,errorThrown){
+        alert('error');
+      }
+    });
+  });
+
+});
+
+</script>
+
+</body>
+</html>
